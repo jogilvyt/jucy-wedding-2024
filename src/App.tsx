@@ -7,10 +7,14 @@ import Squiggle from "./assets/squiggle.png";
 import TheRoughPlan from "./assets/the-rough-plan.png";
 import TheRoughPlanMobile from "./assets/the-rough-plan-mobile.png";
 import GettingThere from "./assets/getting-there.png";
+import GettingThereMobile from "./assets/getting-there-mobile.png";
 import StayingNearby from "./assets/staying-nearby.png";
+import StayingNearbyMobile from "./assets/staying-nearby-mobile.png";
 import Questions from "./assets/questions.png";
+import QuestionsMobile from "./assets/questions-mobile.png";
 import Slugs from "./assets/slugs.png";
 import Arrow from "./assets/arrow.png";
+import JPlusL from "./assets/j-plus-l.png";
 import { Container } from "./components/container";
 import { MapPinIcon } from "./components/map-pin-icon";
 import { LinkIcon } from "./components/link-icon";
@@ -64,12 +68,12 @@ export function App() {
     await wait(400);
     conductor?.shoot();
     await wait(2000);
-    window.open("https://lucyivesmilford.typeform.com/to/mAGDPHrh", "_blank");
+    window.location.assign("https://lucyivesmilford.typeform.com/to/mAGDPHrh");
     setIsRsvpDisabled(false);
   };
 
   const navLinkClassNames =
-    "after:content=[''] relative after:absolute after:left-0 after:right-0 after:h-0.5 after:bg-dark-green after:bottom-[-2px] after:transition-all after:duration-300 after:transform after:scale-x-0 hover:after:scale-x-100 after:opacity-75 text-xl lg:text-2xl";
+    "after:content=[''] relative after:absolute after:left-0 after:right-0 after:h-0.5 after:bg-dark-green after:bottom-[-2px] after:transition-all after:duration-300 after:transform after:scale-x-0 hover:after:scale-x-100 after:opacity-75 text-xl lg:text-xl";
 
   return (
     <>
@@ -79,7 +83,23 @@ export function App() {
         }`}
       >
         <nav className="max-w-[1300px] mx-auto flex justify-between align-center">
+          <a href="#top" className="group md:hidden">
+            <img
+              src={JPlusL}
+              alt="J + L"
+              className="w-12 group-hover:rorate-3"
+            />
+          </a>
           <ul className="gap-x-12 lg:gap-x-16 text-dark-green items-center hidden md:flex">
+            <li>
+              <a href="#top" className="group">
+                <img
+                  src={JPlusL}
+                  alt="J + L"
+                  className="w-16 group-hover:-rotate-12 transition-transform duration-300"
+                />
+              </a>
+            </li>
             <li>
               <a href="#timings" className={navLinkClassNames}>
                 Timings
@@ -109,25 +129,30 @@ export function App() {
           <Button
             onClick={onRsvpClick}
             disabled={isRsvpDisabled}
-            className="ml-auto"
+            className="ml-auto my-auto"
           >
             RSVP
           </Button>
         </nav>
       </header>
+      <a href="#top" />
       <main className="scroll-smooth">
-        <section className="pt-12 pb-16 md:py-24 cursor-tada">
+        <section className="pt-6 pb-20 md:py-24 cursor-tada">
           <Container width="wide">
             <div className="grid grid-cols-2 text-dark-green">
-              <div className="text-center col-span-2 md:col-span-1 md:mt-12">
-                <img src={ThisIsIt} alt="This is it" className="max-w-full" />
-                <h1 className="italic text-2xl">LUCY &amp; JACK GET WED</h1>
+              <div className="text-center col-span-2 md:col-span-1 md:mt-12 order-2 md:order-1">
+                <img
+                  src={ThisIsIt}
+                  alt="This is it"
+                  className="max-w-full hidden md:block"
+                />
+                <h1 className="italic text-xl">LUCY &amp; JACK GET WED</h1>
                 <img
                   src={Squiggle}
                   alt=""
-                  className="mx-auto max-w-full my-7"
+                  className="mx-auto max-w-full my-5"
                 />
-                <p className="text-2xl">
+                <p className="text-xl">
                   <RoughNotation
                     show
                     type="circle"
@@ -142,7 +167,7 @@ export function App() {
                   </RoughNotation>
                 </p>
               </div>
-              <div className="hidden md:block relative">
+              <div className="col-span-2 md:col-span-1 order-1 md:order-2 relative -mt-4">
                 <img
                   src={CheersOne}
                   alt=""
@@ -161,14 +186,14 @@ export function App() {
             </div>
           </Container>
         </section>
-        <section className="bg-beige py-14 md:py-28 text-dark-green text-base md:text-2xl cursor-cheers">
+        <section className="bg-beige py-14 md:py-28 text-dark-green text-base md:text-xl cursor-cheers">
           <Container width="medium">
             <div className="text-center max-w-[260px] mx-auto md:max-w-full">
-              <p className="mb-4">
+              <p className="mb-3">
                 We're so excited to share our wedding day with you!
               </p>
-              <p className="mb-8 md:mb-12 font-medium">
-                Please RSVP by XXX date by clicking the link below.
+              <p className="mb-8 md:mb-8 font-medium">
+                Please RSVP by 19<sup>th</sup> April by clicking the link below.
               </p>
               <Button onClick={onRsvpClick} disabled={isRsvpDisabled}>
                 RSVP
@@ -188,18 +213,18 @@ export function App() {
               <img
                 src={TheRoughPlan}
                 alt=""
-                className="max-w-full w-full mb-16"
+                className="max-w-full w-full mb-8 md:mb-12"
               />
             </picture>
-            <div className="flex flex-col gap-y-20 text-dark-green relative">
+            <div className="flex flex-col gap-y-10 md:gap-y-20 text-dark-green relative">
               <TimingsSection
                 timing="Friday 12th July, 5 - 7pm"
                 isoTime="2024-07-13T13:00:00.000"
               >
-                <h3 className="text-xl md:text-2xl italic">
+                <h3 className="text-xl md:text-xl italic mb-2">
                   Drinks at Gun Brewery Tap Room
                 </h3>
-                <div className="flex flex-col gap-y-3 mb-6 text-base md:text-lg">
+                <div className="flex flex-col gap-y-3 mb-4 text-base md:text-base">
                   <p>
                     If you're staying in the area, we'd love to see you for a
                     couple of drinks at the Gun Brewery Tap Room on the evening
@@ -232,8 +257,10 @@ export function App() {
                 timing="Saturday 13th July, 1pm - midnight"
                 isoTime="2024-07-13T13:00:00.000"
               >
-                <h3 className="text-xl md:text-2xl italic">The Main Event!</h3>
-                <div className="flex flex-col gap-y-3 mb-6  text-base md:text-lg">
+                <h3 className="text-xl md:text-xl italic mb-2">
+                  The Main Event!
+                </h3>
+                <div className="flex flex-col gap-y-3 mb-4  text-base md:text-base">
                   <p>Our wedding day, yay!</p>
                   <p>
                     Please arrive at Hawthbush Farm <b>between 1 and 1:30pm.</b>
@@ -281,15 +308,19 @@ export function App() {
         >
           <Container width="medium">
             <h2 className="sr-only">Getting there</h2>
-            <img
-              src={GettingThere}
-              alt=""
-              className="max-w-full mx-auto mb-4 md:mb-8"
-            />
+            <picture>
+              <source media="(max-width: 850px)" srcSet={GettingThereMobile} />
+              <source media="(min-width: 851px)" srcSet={GettingThere} />
+              <img
+                src={GettingThere}
+                alt=""
+                className="max-w-full w-full md:mx-auto mb-6 md:mb-0"
+              />
+            </picture>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-0">
               <div className="cursor-car">
-                <h3 className="font-medium text-xl md:text-2xl mb-4">By car</h3>
-                <div className="text-base md:text-xl flex flex-col gap-y-4">
+                <h3 className="font-medium text-xl md:text-xl mb-4">By car</h3>
+                <div className="text-base md:text-base flex flex-col gap-y-4">
                   <p>
                     Hawthbush Farm is pretty easy to get to using Google Maps:
                     <b className="font-medium">
@@ -311,10 +342,10 @@ export function App() {
                 </div>
               </div>
               <div className="cursor-train">
-                <h3 className="font-medium text-xl md:text-2xl mb-4">
+                <h3 className="font-medium text-xl md:text-xl mb-4">
                   By train
                 </h3>
-                <div className="text-base md:text-xl flex flex-col gap-y-4">
+                <div className="text-base md:text-base flex flex-col gap-y-4">
                   <p>
                     The nearest mainline stations are Eastbourne, Uckfield and
                     Lewes (pretty much equidistant).
@@ -348,17 +379,24 @@ export function App() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-16">
               <div>
                 <h2 className="sr-only">Accommodation</h2>
-                <img
-                  src={StayingNearby}
-                  alt=""
-                  className="max-w-full lg:pr-12"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 850px)"
+                    srcSet={StayingNearbyMobile}
+                  />
+                  <source media="(min-width: 851px)" srcSet={StayingNearby} />
+                  <img
+                    src={StayingNearby}
+                    alt=""
+                    className="max-w-full lg:pr-12 mb-3 md:mb-0"
+                  />
+                </picture>
               </div>
               <div className="mt-6">
-                <h3 className="font-medium text-xl md:text-2xl mb-3 md:mb-7">
+                <h3 className="font-medium text-xl md:text-xl mb-3 md:mb-4">
                   Hotels
                 </h3>
-                <ul className="text-base md:text-xl flex flex-col gap-y-4 md:gap-y-7">
+                <ul className="text-base md:text-base flex flex-col gap-y-4 md:gap-y-7">
                   <li>
                     <b className="font-medium">Premier Inn, Polegate</b>
                     <br />
@@ -385,10 +423,10 @@ export function App() {
                 </ul>
               </div>
               <div className="mt-6">
-                <h3 className="font-medium text-xl md:text-2xl mb-3 md:mb-7">
+                <h3 className="font-medium text-xl md:text-xl mb-3 md:mb-4">
                   Taxis
                 </h3>
-                <ul className="text-base md:text-xl flex flex-col gap-y-4 md:gap-y-7">
+                <ul className="text-base md:text-base flex flex-col gap-y-4 md:gap-y-7">
                   <li>
                     <b className="font-medium">Lewes Town Taxis</b> - 01273
                     474747
@@ -411,17 +449,21 @@ export function App() {
         >
           <Container width="wide">
             <h2 className="sr-only">Questions</h2>
-            <img
-              src={Questions}
-              alt=""
-              className="max-w-[810px] w-full mx-auto mb-8 md:mb-16"
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 md:gap-y-12">
+            <picture>
+              <source media="(max-width: 850px)" srcSet={QuestionsMobile} />
+              <source media="(min-width: 851px)" srcSet={Questions} />
+              <img
+                src={Questions}
+                alt=""
+                className="md:max-w-[810px] max-w-full md:mx-auto mb-9 md:mb-10"
+              />
+            </picture>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 md:gap-y-10">
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   What should I wear?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   Wear something that makes you feel good. We really don't mind
                   what you wear, we'll just be really happy to see you. If it
                   helps, we'll both be in fairly relaxed attire - Jack won't be
@@ -430,10 +472,10 @@ export function App() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   What about shoes?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   Our ceremony will be in the woods, so it may be a bit wobbly
                   under foot. We're hoping it should be dry (please do a sun
                   dance for us), but we'd recommend avoiding super high / skinny
@@ -441,38 +483,38 @@ export function App() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   Can I bring a guest?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   Please drop one of us a line if there's a special someone
                   you'd like to bring who wasn't on your invitation.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   Can I bring my dog?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   This is a very serious question. I'm sure you all know how
                   much we love dogs, but the venue is a working farm, so we're
                   sad to say dogs are not allowed.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   Where should I park?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   There's plenty of parking on site and someone will be there
                   when you arrive to direct you.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-medium mb-2 md:mb-4">
+                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   Can I leave my car overnight?
                 </h3>
-                <p className="text-base md:text-xl">
+                <p className="text-base md:text-base">
                   Yup, of course! Just please make sure you collect your car by
                   12 o'clock the next day.
                 </p>
@@ -480,10 +522,10 @@ export function App() {
             </div>
           </Container>
         </section>
-        <section className="text-center py-24 md:py-52 cursor-heart" id="gifts">
+        <section className="text-center py-24 md:py-32 cursor-heart" id="gifts">
           <Container width="narrow">
-            <div className="flex flex-col gap-y-3 md:gap-y-4 text-base md:text-xl">
-              <h2 className="text-lg md:text-2xl font-medium">
+            <div className="flex flex-col gap-y-3 md:gap-y-4 text-base md:text-base">
+              <h2 className="text-lg md:text-xl font-medium">
                 A small note about gifts
               </h2>
               <p>
@@ -498,8 +540,8 @@ export function App() {
             </div>
           </Container>
         </section>
-        <section className="bg-pink grid grid-cols-1 md:grid-cols-2 text-beige text-base md:text-xl cursor-hug">
-          <div className="flex flex-col h-full items-center justify-center gap-y-2 md:gap-y-4 max-w-[600px] mx-auto text-center py-12 px-8">
+        <section className="bg-pink grid grid-cols-1 md:grid-cols-2 text-beige text-base md:text-base cursor-hug">
+          <div className="flex flex-col h-full items-center justify-center gap-y-2 md:gap-y-4 max-w-[600px] mx-auto text-center py-16 px-8">
             <h2 className="font-medium">
               Phew - you've finally reached the bottom of the page.
             </h2>
@@ -543,10 +585,10 @@ function TimingsSection({ timing, isoTime, children }: TimingsSectionProps) {
 
   return (
     <div
-      className="max-w-[640px] mx-auto flex flex-col gap-y-3 md:gap-y-5"
+      className="max-w-[640px] mx-auto flex flex-col gap-y-3 md:gap-y-3"
       ref={ref}
     >
-      <time dateTime={isoTime} className="text-xl md:text-2xl font-medium">
+      <time dateTime={isoTime} className="text-xl md:text-xl font-medium">
         <RoughNotation
           show={isInView}
           type="underline"
@@ -575,10 +617,12 @@ function TimingsLink({ children, icon: Icon, ...props }: TimingsLinkProps) {
     <a
       target="_blank"
       rel="noreferrer"
-      className="flex gap-x-5 items-center mb-1 text-pink italic text-base md:text-lg hover:underline"
+      className="flex gap-x-5 items-center mb-1 text-pink italic text-base md:text-base hover:underline"
       {...props}
     >
-      <span className="w-[40px] justify-center flex shrink-0">{Icon}</span>
+      <span className="h-[30px] justify-center flex shrink-0 w-[40px]">
+        {Icon}
+      </span>
       {children}
     </a>
   );
