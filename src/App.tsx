@@ -90,7 +90,7 @@ export function App() {
               className="w-12 group-hover:rorate-3"
             />
           </a>
-          <ul className="gap-x-12 lg:gap-x-16 text-dark-green items-center hidden md:flex">
+          <ul className="gap-x-8 lg:gap-x-16 text-dark-green items-center hidden md:flex">
             <li>
               <a href="#top" className="group">
                 <img
@@ -303,7 +303,7 @@ export function App() {
           </Container>
         </section>
         <section
-          className="bg-lilac py-12 md:py-24 text-beige cursor-taxi scroll-mt-24"
+          className="bg-lilac py-12 lg:py-24 text-beige cursor-taxi scroll-mt-24"
           id="travel"
         >
           <Container width="medium">
@@ -314,7 +314,7 @@ export function App() {
               <img
                 src={GettingThere}
                 alt=""
-                className="max-w-full w-full md:mx-auto mb-6 md:mb-0"
+                className="max-w-full w-full md:mx-auto mb-6 md:mb-10 lg:mb-0"
               />
             </picture>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-0">
@@ -376,8 +376,8 @@ export function App() {
           id="accommodation"
         >
           <Container width="wide">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-16">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-x-16">
+              <div className="md:col-span-4 lg:col-span-1">
                 <h2 className="sr-only">Accommodation</h2>
                 <picture>
                   <source
@@ -388,11 +388,11 @@ export function App() {
                   <img
                     src={StayingNearby}
                     alt=""
-                    className="max-w-full lg:pr-12 mb-3 md:mb-0"
+                    className="max-w-full md:w-full lg:w-auto lg:pr-12 mb-3 md:mb-10 lg:mb-0"
                   />
                 </picture>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 md:col-span-2 lg:col-span-1">
                 <h3 className="font-medium text-xl md:text-xl mb-3 md:mb-4">
                   Hotels
                 </h3>
@@ -422,7 +422,7 @@ export function App() {
                   <li>Plus, loads of lovely Airbnbs!</li>
                 </ul>
               </div>
-              <div className="mt-6">
+              <div className="mt-6 md:col-span-2 lg:col-span-1">
                 <h3 className="font-medium text-xl md:text-xl mb-3 md:mb-4">
                   Taxis
                 </h3>
@@ -455,7 +455,7 @@ export function App() {
               <img
                 src={Questions}
                 alt=""
-                className="md:max-w-[810px] max-w-full md:mx-auto mb-9 md:mb-10"
+                className="lg:max-w-[810px] w-full lg:w-auto max-w-full lg:mx-auto mb-9 md:mb-10"
               />
             </picture>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 md:gap-y-10">
