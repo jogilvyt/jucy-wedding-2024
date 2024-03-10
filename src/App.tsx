@@ -150,7 +150,7 @@ export function App() {
                 <img
                   src={Squiggle}
                   alt=""
-                  className="mx-auto max-w-full my-5"
+                  className="mx-auto max-w-[350px] w-full my-5"
                 />
                 <p className="text-xl">
                   <RoughNotation
@@ -310,11 +310,11 @@ export function App() {
             <h2 className="sr-only">Getting there</h2>
             <picture>
               <source media="(max-width: 850px)" srcSet={GettingThereMobile} />
-              <source media="(min-width: 851px)" srcSet={GettingThere} />
+              <source media="(min-width: 851px)" srcSet={GettingThereMobile} />
               <img
-                src={GettingThere}
+                src={GettingThereMobile}
                 alt=""
-                className="max-w-full w-full md:mx-auto mb-6 md:mb-10 lg:mb-0"
+                className="max-w-full w-full md:mx-auto mb-6 md:mb-10"
               />
             </picture>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-0">
@@ -323,8 +323,12 @@ export function App() {
                 <div className="text-base md:text-base flex flex-col gap-y-4">
                   <p>
                     Hawthbush Farm is pretty easy to get to using Google Maps:
+                  </p>
+                  <p>
                     <b className="font-medium">
-                      Hawthbush Farm, Gun Hill, Heathfield TN21 0JY
+                      Hawthbush Farm, Gun Hill,
+                      <br />
+                      Heathfield TN21 0JY
                     </b>
                   </p>
                   <p>
@@ -398,22 +402,50 @@ export function App() {
                 </h3>
                 <ul className="text-base md:text-base flex flex-col gap-y-4 md:gap-y-7">
                   <li>
-                    <b className="font-medium">Premier Inn, Polegate</b>
+                    <a
+                      href="https://www.premierinn.com/gb/en/hotels/england/east-sussex/eastbourne/eastbourne-polegate.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="hover:underline"
+                    >
+                      <b className="font-medium">Premier Inn, Polegate</b>
+                    </a>
                     <br />
                     <i>(15 minute drive - you know what you're getting)</i>
                   </li>
                   <li>
-                    <b className="font-medium">Travelodge, Hellingly</b>
+                    <a
+                      href="https://www.travelodge.co.uk/hotels/32/Hellingly-Eastbourne-hotel"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="hover:underline"
+                    >
+                      <b className="font-medium">Travelodge, Hellingly</b>
+                    </a>
                     <br />
                     <i>(8 minute drive - cheap &amp; cheerful)</i>
                   </li>
                   <li>
-                    <b className="font-medium">Port Hotel, Eastbourne</b>
+                    <a
+                      href="https://www.porthotel.co.uk/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="hover:underline"
+                    >
+                      <b className="font-medium">Port Hotel, Eastbourne</b>
+                    </a>
                     <br />
                     <i>(20 minute drive - boutique, seafront)</i>
                   </li>
                   <li>
-                    <b className="font-medium">Saltmarsh House</b>
+                    <a
+                      href="https://www.saltmarshfarmhouse.co.uk/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="hover:underline"
+                    >
+                      <b className="font-medium">Saltmarsh Farmhouse</b>
+                    </a>
                     <br />
                     <i>
                       (25 minute drive - cattagey, Seven Sisters Country Park)
@@ -522,7 +554,10 @@ export function App() {
             </div>
           </Container>
         </section>
-        <section className="text-center py-24 md:py-32 cursor-heart" id="gifts">
+        <section
+          className="text-center py-24 md:py-32 cursor-heart text-dark-green"
+          id="gifts"
+        >
           <Container width="narrow">
             <div className="flex flex-col gap-y-3 md:gap-y-4 text-base md:text-base">
               <h2 className="text-lg md:text-xl font-medium">
@@ -533,9 +568,9 @@ export function App() {
                 could ask for.
               </p>
               <p>
-                However, if you insist and are stuck for ideas, any
-                contributions towards our honeymoon in New Zealand would be
-                hugely appreciated 💖
+                However, if you <b className="font-semibold italic">insist</b>{" "}
+                and are stuck for ideas, any contributions towards our honeymoon
+                in New Zealand would be hugely appreciated 💖
               </p>
             </div>
           </Container>
