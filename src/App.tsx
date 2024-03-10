@@ -6,7 +6,6 @@ import CheersTwo from "./assets/cheers-two.png";
 import Squiggle from "./assets/squiggle.png";
 import TheRoughPlan from "./assets/the-rough-plan.png";
 import TheRoughPlanMobile from "./assets/the-rough-plan-mobile.png";
-import GettingThere from "./assets/getting-there.png";
 import GettingThereMobile from "./assets/getting-there-mobile.png";
 import StayingNearby from "./assets/staying-nearby.png";
 import StayingNearbyMobile from "./assets/staying-nearby-mobile.png";
