@@ -24,7 +24,7 @@ import { TConductorInstance } from "react-canvas-confetti/dist/types";
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-export function App() {
+export function EveningGuests() {
   const [conductor, setConductor] = React.useState<TConductorInstance>();
   const [isRsvpDisabled, setIsRsvpDisabled] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(() => {
@@ -67,7 +67,7 @@ export function App() {
     await wait(400);
     conductor?.shoot();
     await wait(2000);
-    window.location.assign("https://lucyivesmilford.typeform.com/to/mAGDPHrh");
+    window.location.assign("https://lucyivesmilford.typeform.com/to/ReIhX3oo");
   };
 
   const navLinkClassNames =
@@ -116,11 +116,6 @@ export function App() {
             <li>
               <a href="#faq" className={navLinkClassNames}>
                 FAQ
-              </a>
-            </li>
-            <li>
-              <a href="#gifts" className={navLinkClassNames}>
-                Gifts
               </a>
             </li>
           </ul>
@@ -188,10 +183,11 @@ export function App() {
           <Container width="medium">
             <div className="text-center max-w-[260px] mx-auto md:max-w-full">
               <p className="mb-3">
-                We're so excited to share our wedding day with you!
+                We'd love you to join us at our wedding reception for drinks and
+                dancing.
               </p>
               <p className="mb-8 md:mb-8 font-medium">
-                Please RSVP by 19<sup>th</sup> April by clicking the link below.
+                Please RSVP by 17<sup>th</sup> May by clicking the link below.
               </p>
               <Button onClick={onRsvpClick} disabled={isRsvpDisabled}>
                 RSVP
@@ -216,63 +212,25 @@ export function App() {
             </picture>
             <div className="flex flex-col gap-y-10 md:gap-y-20 text-dark-green relative">
               <TimingsSection
-                timing="Friday 12th July, 5 - 7pm"
-                isoTime="2024-07-13T13:00:00.000"
+                timing="Saturday 13th July, 6:30pm - midnight"
+                isoTime="2024-07-13T18:30:00.000"
               >
-                <h3 className="text-xl md:text-xl italic mb-2">
-                  Drinks at Gun Brewery Tap Room
-                </h3>
-                <div className="flex flex-col gap-y-3 mb-4 text-base md:text-base">
-                  <p>
-                    If you're staying in the area, we'd love to see you for a
-                    couple of drinks at the Gun Brewery Tap Room on the evening
-                    of Friday 12th. We'll be there between around 5pm and 7pm.
-                  </p>
-                  <p>
-                    The tap room is just next door to our wedding venue. As well
-                    as lots of great beer options, there are also often really
-                    good street food vans outside.
-                  </p>
-                  <p>
-                    We'll reserve an area, so please drop us a line if you're
-                    planning on joining us!
-                  </p>
-                </div>
-                <TimingsLink
-                  href="https://maps.app.goo.gl/uggUwXxuHe3JMhFD6"
-                  icon={<MapPinIcon />}
-                >
-                  Gun Brewery, Hawthbush Farm, Gun Hill, East Sussex, TN21 0JX
-                </TimingsLink>
-                <TimingsLink
-                  href="https://www.gunbrewery.co.uk/taproom"
-                  icon={<LinkIcon />}
-                >
-                  gunbrewery.co.uk/taproom
-                </TimingsLink>
-              </TimingsSection>
-              <TimingsSection
-                timing="Saturday 13th July, 1pm - midnight"
-                isoTime="2024-07-13T13:00:00.000"
-              >
-                <h3 className="text-xl md:text-xl italic mb-2">
-                  The Main Event!
-                </h3>
                 <div className="flex flex-col gap-y-3 mb-4  text-base md:text-base">
-                  <p>Our wedding day, yay!</p>
+                  <h3 className="text-xl md:text-xl italic mb-2">
+                    Our wedding reception!
+                  </h3>
                   <p>
-                    Please arrive at Hawthbush Farm <b>between 1 and 1:30pm.</b>
+                    Please arrive at Hawthbush Farm <b>from 6:30pm.</b>
                   </p>
                   <p>
-                    There's plenty of parking available on site, and it's a 10
-                    minute walk from the car park to the ceremony area, which is
-                    in the woods (it is possible to drive up to the woodland
-                    entrance if needed).
+                    There'll be drinks, dancing and a light evening snack (mac &
+                    cheese pots!). Wear something that makes you feel good and
+                    bring your best dance moves.
                   </p>
                   <p>
-                    Once we've tied the knot, we'll walk back across the field
-                    to the wonky barn, where much food, drink and merriment will
-                    follow.
+                    If you'd like to get there a bit earlier, there's a taproom
+                    right next door to our venue (Gun Brewery) where you can
+                    grab a drink.
                   </p>
                   <p>
                     Please kindly arrange for taxis by midnight. Local taxi
@@ -338,8 +296,8 @@ export function App() {
                   </p>
                   <p>
                     Once through the gate, the wonky barn is right in front of
-                    you and the car park to your left. Someone will be there to
-                    greet and direct you.
+                    you and the car park to your left. You should see (and
+                    hear!) us from there.
                   </p>
                 </div>
               </div>
@@ -503,41 +461,11 @@ export function App() {
               </div>
               <div>
                 <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
-                  What about shoes?
-                </h3>
-                <p className="text-base md:text-base">
-                  Our ceremony will be in the woods, so it may be a bit wobbly
-                  under foot. We're hoping it should be dry (please do a sun
-                  dance for us), but we'd recommend avoiding super high / skinny
-                  heels.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
-                  Can I bring a guest?
-                </h3>
-                <p className="text-base md:text-base">
-                  Please drop one of us a line if there's a special someone
-                  you'd like to bring who wasn't on your invitation.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
-                  Can I bring my dog?
-                </h3>
-                <p className="text-base md:text-base">
-                  This is a very serious question. I'm sure you all know how
-                  much we love dogs, but the venue is a working farm, so we're
-                  sad to say dogs are not allowed.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl md:text-xl font-medium mb-2 md:mb-4">
                   Where should I park?
                 </h3>
                 <p className="text-base md:text-base">
-                  There's plenty of parking on site and someone will be there
-                  when you arrive to direct you.
+                  There's plenty of parking on site. You should be able to see
+                  (and hear) us from the car park.
                 </p>
               </div>
               <div>
@@ -552,27 +480,6 @@ export function App() {
             </div>
           </Container>
         </section>
-        <section
-          className="text-center py-24 md:py-32 cursor-heart text-dark-green"
-          id="gifts"
-        >
-          <Container width="narrow">
-            <div className="flex flex-col gap-y-3 md:gap-y-4 text-base md:text-base">
-              <h2 className="text-lg md:text-xl font-medium">
-                A small note about gifts
-              </h2>
-              <p>
-                Last but not least - truly, your presence is the best present we
-                could ask for.
-              </p>
-              <p>
-                However, if you <b className="font-semibold italic">insist</b>{" "}
-                and are stuck for ideas, any contributions towards our honeymoon
-                in New Zealand would be hugely appreciated 💖
-              </p>
-            </div>
-          </Container>
-        </section>
         <section className="bg-pink grid grid-cols-1 md:grid-cols-2 text-beige text-base md:text-base cursor-hug">
           <div className="flex flex-col h-full items-center justify-center gap-y-2 md:gap-y-4 max-w-[600px] mx-auto text-center py-16 px-8">
             <h2 className="font-medium">
@@ -584,7 +491,7 @@ export function App() {
             </p>
             <p>
               If you have any questions or need anything, please text or call
-              one of us (our numbers are on the invitation).
+              one of us.
             </p>
             <p>Big love, </p>
             <p>Lu & Jack xxx</p>
