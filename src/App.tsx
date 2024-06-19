@@ -570,6 +570,22 @@ export function App() {
                 and are stuck for ideas, any contributions towards our honeymoon
                 in New Zealand would be hugely appreciated 💖
               </p>
+              <p>
+                If you would like to, you can make a bank transfer to the
+                following shared account:
+              </p>
+              <p>
+                <b className="font-semibold">Honeymoon fund</b>
+                <br />
+                MR JSO TAYLOR / LUCY IVES-MILFORD
+                <br />
+                <b className="font-semibold">Bank:</b> Nationwide Building
+                Society
+                <br />
+                <b className="font-semibold">Sort code:</b> 07-16-60
+                <br />
+                <b className="font-semibold">Account number:</b> 76307144
+              </p>
             </div>
           </Container>
         </section>
