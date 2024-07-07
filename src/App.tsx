@@ -577,7 +577,7 @@ export function App() {
               <p>
                 <b className="font-semibold">Honeymoon fund</b>
                 <br />
-                MR JSO TAYLOR / LUCY IVES-MILFORD
+                JOHN TAYLOR or LUCY IVES-MILFORD
                 <br />
                 <b className="font-semibold">Bank:</b> Nationwide Building
                 Society
